@@ -46,7 +46,7 @@ function escolhePixel() {
 function limparPixel() {
   for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].style.backgroundColor = 'white';
-  };
+  }
 }
 limpar.addEventListener('click', limparPixel);
 
