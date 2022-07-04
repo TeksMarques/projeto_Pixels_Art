@@ -1,0 +1,30 @@
+
+#color-palette {
+
+}
+
+
+
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    width: 80px;
+    min-height: 80px;
+    margin-right: 10px;
+}
+
+.black {
+    background-color: black;
+}
+
+.pink {
+    background-color: lightpink;
+}
+
+.purple {
+    background-color: violet;
+}
+
+.blue {
+    background-color: lightblue;
+}
