@@ -1,7 +1,7 @@
 const quadros = document.getElementById('pixel-board');
 const paleta = document.querySelectorAll('.color');
 const pixels = document.getElementsByClassName('pixel');
-const limpar = document.getElementById('clear-board')
+const limpar = document.getElementById('clear-board');
 
 function criandoQuadrados(n) {
   for (let index = 0; index < n; index += 1) {
@@ -15,15 +15,9 @@ function criandoQuadrados(n) {
     quadros.appendChild(conjunto);
   }
 }
-
-function escolherPaleta() {
-  for (let index = 0; index < paleta.length; index += 1) {
-    paleta[index].addEventListener('click', escolherCor);
-  }
-}
 function escolherCor() {
   for (let i = 0; i < paleta.length; i += 1) {
-    if (paleta[i] == this) {
+    if (paleta[i] === this) {
       this.classList.add('selected');
       const cssObj = window.getComputedStyle(this, null);
       const bgColor = cssObj.getPropertyValue('background-color');
@@ -33,10 +27,9 @@ function escolherCor() {
     }
   }
 }
-
-function escolhePixel() {
-  for (let index = 0; index < pixels.length; index += 1) {
-    pixels[index].addEventListener('click', adicionaCor);
+function escolherPaleta() {
+  for (let index = 0; index < paleta.length; index += 1) {
+    paleta[index].addEventListener('click', escolherCor);
   }
 }
 
@@ -44,14 +37,20 @@ function adicionaCor() {
   this.style.backgroundColor = window.corI;
 }
 
-function limparPixel(){
-    for (let index = 0; index < pixels.length; index += 1) {
-        pixels[index].style.backgroundColor = 'white'
-      }
+function escolhePixel() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', adicionaCor);
+  }
 }
-limpar.addEventListener('click', limparPixel)
+
+function limparPixel() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = 'white';
+  };
+}
+limpar.addEventListener('click', limparPixel);
 
 criandoQuadrados(5);
 escolherPaleta();
 escolhePixel();
-window.corI = 'black'
+window.corI = 'black';
