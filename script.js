@@ -1,5 +1,6 @@
 const quadros = document.getElementById('pixel-board');
-const paleta = document.querySelectorAll('.color')
+const paleta = document.querySelectorAll('.color');
+const pixels = document.getElementsByClassName('pixel');
 
 function criandoQuadrados(n) {
   for (let index = 0; index < n; index += 1) {
@@ -14,27 +15,34 @@ function criandoQuadrados(n) {
   }
 }
 
-
-
 function escolherPaleta() {
-    for (let index = 0; index < paleta.length; index +=1) {
-        paleta[index].addEventListener('click', escolherCor)
-    }
+  for (let index = 0; index < paleta.length; index += 1) {
+    paleta[index].addEventListener('click', escolherCor);
+  }
 }
 function escolherCor() {
-    for (let i = 0; i < paleta.length; i +=1){
-        if (paleta[i] == this) {
-            this.classList.add('selected');
-            const cssObj = window.getComputedStyle(this, null);
-            let bgColor = cssObj.getPropertyValue("background-color");
-            window.corI = bgColor;
-        } else {
-            paleta[i].classList.remove('selected');
-        }
-        
+  for (let i = 0; i < paleta.length; i += 1) {
+    if (paleta[i] == this) {
+      this.classList.add('selected');
+      const cssObj = window.getComputedStyle(this, null);
+      const bgColor = cssObj.getPropertyValue('background-color');
+      window.corI = bgColor;
+    } else {
+      paleta[i].classList.remove('selected');
     }
+  }
 }
 
+function escolhaPixel(){
+    for (let index = 0; index < pixels.length; index += 1) {
+        pixels[index].addEventListener('click', adicionaCor);
+      }
+}
+
+function adicionaCor(){
+    this.style.backgroundColor = window.corI
+}
 
 criandoQuadrados(5);
 escolherPaleta();
+escolhaPixel()
