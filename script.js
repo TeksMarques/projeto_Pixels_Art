@@ -1,4 +1,4 @@
-const quadros = document.getElementById('pixel-board');
+const quadros = document.getElementById("pixel-board");
 
 function criandoQuadrados(n) {
   for (let index = 0; index < n; index += 1) {
