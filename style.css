@@ -23,10 +23,11 @@
 }
 
 .linha {
-  display: inline-block;
+    line-height: 0;
 }
 
 .pixel {
+  display: inline-block;
   border: 1px solid black;
   width: 40px;
   min-height: 40px;
