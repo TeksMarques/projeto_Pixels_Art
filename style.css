@@ -1,9 +1,10 @@
-
-#color-palette {
-
+#title {
+    text-align: center;
 }
 
-
+#color-palette {
+    text-align: center;
+}
 
 .color {
     border: 1px solid black;
@@ -27,4 +28,15 @@
 
 .blue {
     background-color: lightblue;
+}
+
+.linha {
+    display: inline-block;
+    
+}
+
+.pixel {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
 }
