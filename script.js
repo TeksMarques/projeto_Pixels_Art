@@ -1,6 +1,7 @@
 const quadros = document.getElementById('pixel-board');
 const paleta = document.querySelectorAll('.color');
 const pixels = document.getElementsByClassName('pixel');
+const limpar = document.getElementById('clear-board')
 
 function criandoQuadrados(n) {
   for (let index = 0; index < n; index += 1) {
@@ -33,16 +34,24 @@ function escolherCor() {
   }
 }
 
-function escolhaPixel(){
-    for (let index = 0; index < pixels.length; index += 1) {
-        pixels[index].addEventListener('click', adicionaCor);
-      }
+function escolhePixel() {
+  for (let index = 0; index < pixels.length; index += 1) {
+    pixels[index].addEventListener('click', adicionaCor);
+  }
 }
 
-function adicionaCor(){
-    this.style.backgroundColor = window.corI
+function adicionaCor() {
+  this.style.backgroundColor = window.corI;
 }
+
+function limparPixel(){
+    for (let index = 0; index < pixels.length; index += 1) {
+        pixels[index].style.backgroundColor = 'white'
+      }
+}
+limpar.addEventListener('click', limparPixel)
 
 criandoQuadrados(5);
 escolherPaleta();
-escolhaPixel()
+escolhePixel();
+window.corI = 'black'
