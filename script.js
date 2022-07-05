@@ -2,7 +2,6 @@ const quadros = document.getElementById('pixel-board');
 const paleta = document.querySelectorAll('.color');
 const pixels = document.getElementsByClassName('pixel');
 const limpar = document.getElementById('clear-board');
-const inputN = document.getElementById('board-size');
 const btnVqv = document.getElementById('generate-board');
 
 function criandoQuadrados(n) {
@@ -11,7 +10,7 @@ function criandoQuadrados(n) {
     alert('Board inválido!')
   } else if (window.size > 50) {
     n = 50;
-    alert('Board inválido!')
+    alert('Board inválido!');
   }
   for (let index = 0; index < n; index += 1) {
     const conjunto = document.createElement('div');
@@ -61,7 +60,7 @@ limpar.addEventListener('click', limparPixel);
 
 function valorInput() {
   const valor = document.getElementById('board-size').value;
-  window.size = valor
+  window.size = valor;
 }
 function novoQuadrado() {
   const quadroInicial = document.querySelectorAll('.linha');
@@ -72,14 +71,11 @@ function novoQuadrado() {
 function gerarNovo() {
   valorInput();
   novoQuadrado();
-  criandoQuadrados(window.size)
-  escolhePixel()
+  criandoQuadrados(window.size);
+  escolhePixel();
 }
 
 btnVqv.addEventListener('click', gerarNovo);
-
-
-
 
 criandoQuadrados(5);
 escolherPaleta();
