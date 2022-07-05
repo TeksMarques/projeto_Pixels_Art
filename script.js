@@ -7,7 +7,7 @@ const btnVqv = document.getElementById('generate-board');
 function criandoQuadrados(n) {
   if (window.size < 5) {
     n = 5;
-    alert('Board inválido!')
+    alert('Board inválido!');
   } else if (window.size > 50) {
     n = 50;
     alert('Board inválido!');
@@ -77,7 +77,7 @@ function gerarNovo() {
 
 btnVqv.addEventListener('click', gerarNovo);
 
-criandoQuadrados(5);
+criandoQuadrados();
 escolherPaleta();
 escolhePixel();
 window.corI = 'black';
