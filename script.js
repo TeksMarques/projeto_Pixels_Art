@@ -10,7 +10,7 @@ function criandoQuadrados(n) {
     n = 5;
     alert('Board inválido!')
   } else if (window.size > 50) {
-    n = 5;
+    n = 50;
     alert('Board inválido!')
   }
   for (let index = 0; index < n; index += 1) {
