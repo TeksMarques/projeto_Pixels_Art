@@ -33,3 +33,17 @@
   min-height: 40px;
   background-color: white;
 }
+
+#clear-board {
+  background-color: rgb(227, 231, 231);
+  border-radius: 15px;
+}
+
+#board-size {
+  width: 30px;
+}
+
+#generate-board {
+  background-color: rgb(185, 253, 185);
+  border-radius: 15px;
+}
