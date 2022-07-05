@@ -77,7 +77,7 @@ function gerarNovo() {
 
 btnVqv.addEventListener('click', gerarNovo);
 
-criandoQuadrados();
+criandoQuadrados(5);
 escolherPaleta();
 escolhePixel();
 window.corI = 'black';
