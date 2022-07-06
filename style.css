@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+
 .color {
   border: 1px solid black;
   display: inline-block;
   width: 80px;
   min-height: 80px;
   margin-right: 10px;
+  border-radius: 35px;
+  align-items: center;
 }
 
 .black {
@@ -34,16 +38,56 @@
   background-color: white;
 }
 
+#color-palette {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#title {
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Rubik Moonrocks', cursive;
+  font-size: 100px;
+  background: linear-gradient(to right, #1ad3d3 0%, #934fd3 40%, #ee0fa4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#buttons-area {
+  margin-top: 50px;
+  display: inline-block;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 #clear-board {
   background-color: rgb(227, 231, 231);
   border-radius: 15px;
+
 }
 
 #board-size {
   width: 30px;
+  
 }
 
 #generate-board {
   background-color: rgb(185, 253, 185);
   border-radius: 15px;
 }
+
+#buttons-area button {
+  margin-left: 10px;
+}
+
+.container {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+

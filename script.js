@@ -81,3 +81,5 @@ criandoQuadrados(5);
 escolherPaleta();
 escolhePixel();
 window.corI = 'black';
+
+
